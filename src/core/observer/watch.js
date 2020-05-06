@@ -26,6 +26,15 @@ export class Watcher{
             dep.addSub(this)
         }
     }
+    /**
+     * 从所有依赖项的Dep列表中将自己移除
+    */
+    teardown() {
+        let i = this.deps.length
+        while(i--) {
+            this.deps[i].removeSub(this)
+        }
+    }
 }
 
 const bailRE = /[^\w.$]/;

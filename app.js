@@ -7,7 +7,14 @@ let app = new Vue({
         info: {
             age: '20',
             name: '李白'
-        }
+        },
+        list: [
+            10, 20
+        ]
     }
+})
+app.$watch('message', function(old, n) {
+    console.log('old ' + old)
+    console.log('new ' + n)
 })
 console.log(app)
