@@ -1,15 +1,33 @@
+import { traverse } from "./traverse";
+
 export class Watcher{
     constructor(vm, expOrFn, cb, options) {
         this.vm = vm;
-        this.getter = parsepath(expOrFn)
-        this.cb = cb
+        
+        // 深度监听
+        if (options) {
+            this.deep = !!options.deep
+        }else {
+            this.deep = false
+        }
         this.depIds = new Set()
         this.deps = []
+        // expOrFn支持函数
+        if (typeof expOrFn === 'function') {
+            this.getter = expOrFn
+        }else {
+            this.getter = parsepath(expOrFn)
+        }
+        this.cb = cb
+        
         this.value = this.get()
     }
     get() {
         window.target = this
         let value = this.getter.call(this.vm, this.vm)
+        if (this.deep) {
+            traverse(value)
+        }
         window.target = undefined
         return value
     }
