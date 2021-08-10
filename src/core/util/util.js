@@ -1,3 +1,1 @@
-export function hasOwn() {
-    
-}
+export function hasOwn() {}

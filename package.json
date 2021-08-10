@@ -1,0 +1,25 @@
+{
+	"name": "mi",
+	"version": "0.0.1",
+	"description": "the mini",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"dev": "vite"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/btea/miniVue.git"
+	},
+	"author": "btea",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/btea/miniVue/issues"
+	},
+	"homepage": "https://github.com/btea/miniVue#readme",
+	"devDependencies": {
+		"eslint": "^7.32.0",
+		"prettier": "^2.3.2",
+		"vite": "^2.4.4"
+	}
+}
