@@ -8,3 +8,5 @@
 [naiveui](https://www.naiveui.com/zh-CN/os-theme)  
 [quasa](https://next.quasar.dev/)  
 [PrimeVue](https://primefaces.org/primevue/showcase/#/setup)  
+
+[vue3新官网](https://vue-docs-preview.netlify.app/)  
