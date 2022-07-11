@@ -1,25 +1,50 @@
 {
-	"name": "mi",
-	"version": "0.0.1",
-	"description": "the mini",
-	"main": "index.js",
-	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1",
-		"dev": "vite"
-	},
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/btea/miniVue.git"
-	},
-	"author": "btea",
-	"license": "MIT",
-	"bugs": {
-		"url": "https://github.com/btea/miniVue/issues"
-	},
-	"homepage": "https://github.com/btea/miniVue#readme",
-	"devDependencies": {
-		"eslint": "^7.32.0",
-		"prettier": "^2.3.2",
-		"vite": "^2.4.4"
-	}
+  "name": "chart",
+  "version": "1.0.0",
+  "description": "**_人生不满百，何有千岁忧_**",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "vite",
+    "build": "vite build",
+    "prepare": "husky install",
+    "lint": "eslint . --ext .js,.ts,.json,.vue --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LifeOrLife/chart.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LifeOrLife/chart/issues"
+  },
+  "homepage": "https://github.com/LifeOrLife/chart#readme",
+  "devDependencies": {
+    "@types/node": "^17.0.24",
+    "@typescript-eslint/eslint-plugin": "^4.33.0",
+    "@typescript-eslint/parser": "^4.33.0",
+    "eslint": "^7.32.0",
+    "husky": "^7.0.4",
+    "lint-staged": "^10.5.4",
+    "prettier": "^2.6.2",
+    "typescript": "^4.6.3",
+    "vite": "^2.9.13",
+    "vite-plugin-pwa": "^0.12.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.{js,ts}": [
+      "prettier --write",
+      "eslint --cache --fix"
+    ]
+  },
+  "dependencies": {
+    "pretty-quick": "^3.1.3"
+  }
 }
